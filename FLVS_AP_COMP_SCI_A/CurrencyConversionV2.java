@@ -7,20 +7,25 @@
  * ©CSA/FLVS 2011
  * @author Maria Vieta Jacquard
  * @version 09/01/11
+ *
+ * @author William Isaac O'Hern
+ * @version 10/16/2014
  */
-public class CurrencyConversionV1
+
+import java.util.Scanner;
+
+public class CurrencyConversionV2
 {
-    public static void main(String [ ] args)
+    public static void main(String[] args)
     {
+	Scanner in = new Scanner(System.in);
+
         double startingUsDollars = 5000.00;		// local variable for US Dollars
         double pesosSpent = 7210.25;            // local variable for Mexican pesos spent
-        double pesoExchangeRate = 13.3705;          // local variable for exchange rate of US Dollars to Pesos
         double dollarsSpentInMexico = 0.0;  // local variable for dollars spent in Mexico
 	double eurosSpent = 624.95;
-	double euroExchangeRate = 0.789675;
 	double dollarsSpentInFrance = 0.0;
 	double yenSpent = 99939.75;
-	double yenExchangeRate = 108.0338;
 	double dollarsSpentInJapan = 0.0;
         double remainingUsDollars = 0.0;        // local variable for US Dollars remaining
 
@@ -33,6 +38,15 @@ public class CurrencyConversionV1
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println();
 
+	System.out.println("Please enter the exchange rate for Pesos to Dollars");
+	double pesoExchangeRate = in.nextDouble();
+
+	System.out.println("Please enter the exchange rate for Euros to Dollars");
+	double euroExchangeRate = in.nextDouble();
+
+	System.out.println("Please enter the exchange rate for Yen to Dollars");
+	double yenExchangeRate = in.nextDouble();
+	
         // convertion for Mexican pesos
 	dollarsSpentInMexico = pesosSpent / pesoExchangeRate;
 

@@ -1,27 +1,34 @@
 /**
 *@author Isaac O'Hern
-*@version 10/16/2014
+*version 10/17/2014
 *The purpose of this program is to take a message and turn it in to "text 
-*message speak" using string functions.
+*message speak" using string functions. Using a message given by the user.
 **/
 
-public class TextMessageV1 
+import java.util.Scanner;
+
+public class TextMessageV2 
 {
     public static void main(String arg[])
     {
-	String Message = "laughing out loud at that picture, ive gtg because I have a bunch of homework";
+	Scanner in = new Scanner(System.in);
 	String textMessage;
 	
-	textMessage = Message;
-	textMessage = textMessage.replaceAll("laughing out loud", "lol");
-	textMessage = textMessage.replaceAll("picture", "pic");
-	textMessage = textMessage.replaceAll("homework", "hw");
-	textMessage = textMessage.replaceAll("because", "cuz");
+	System.out.println("Enter your message");
+	String message = in.nextLine();
+	System.out.println("You put in: " + message);
+	
+	textMessage= message;
+	textMessage= textMessage.replaceAll("laughing out loud", "lol");
+	textMessage= textMessage.replaceAll("picture", "pic");
+	textMessage= textMessage.replaceAll("got to go", "gtg");
+	textMessage= textMessage.replaceAll("homework", "hw");
+	textMessage= textMessage.replaceAll("because", "cuz");
 
-	System.out.println("Original Message:\n" + Message);
-	System.out.println("message length: " + textMessage.length() + " characters");
+	System.out.println("Original message:\n" + message);
+	System.out.println("message length: " + message.length() + " characters");
 	System.out.println();
-	System.out.println("New Message:\n" + textMessage);
+	System.out.println("New message:\n" + textMessage);
 	System.out.println("message length: " + textMessage.length() + " characters");
 	System.out.println();
 
