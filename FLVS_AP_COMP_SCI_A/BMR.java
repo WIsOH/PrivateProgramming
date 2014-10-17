@@ -38,7 +38,7 @@ public class BMR
 
 	gender = gender.toUpperCase();
 	weightInKg = weight * poundsToKg;
-	heightInCm = weight * inchesToCm;
+	heightInCm = height * inchesToCm;
 	double basalMR;
 
 	if(gender == "M")
