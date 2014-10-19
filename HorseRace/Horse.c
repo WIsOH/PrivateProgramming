@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define NUMBER_OF_HORSE_NAMES 15
 
@@ -16,7 +17,7 @@ struct Horse {
     int odds;
 }; //Horse to be raced around track
 
-char horseNames[NUMBER_OF_HORSE_NAMES][50] = {"Mirage", "In Front",
+char *horseNames[NUMBER_OF_HORSE_NAMES] = {"Mirage", "In Front",
     "Horlicks", "Go Tebow Go", "Sotally Tober", "Comply or Die",
     "Flat Fleet Feet", "Hoof Hearted", "Notacatbutallama",
     "Nosoupforyou", "Flyer", "Mucho Macho Man", "Dust Bunny",
@@ -33,20 +34,19 @@ struct Horse *create_horse(char *name, int raceNum, int odds) {
 struct Horse *gen_horse() {
     char *nameToUse;
     int raceNum;
-    int odds = 50;
+    int odds = ((rand() % 10) + -5 ) + 50; //Creates number between 45-55
     int i;
 
     do {
 	i = rand() % NUMBER_OF_HORSE_NAMES;
-	if(horseNames[i][0] != 'x')
 	nameToUse = horseNames[i];
     } while(nameToUse[0] == '\0');
     
    raceNum = rand() % 100;
 	    
    struct Horse *genHorse = create_horse(nameToUse, raceNum, odds);
-   
+  
+   horseNames[i] = "\0";
+   printf("%s", horseNames[i]);
    return genHorse;
-
-   nameToUse[0] = 'x'; //Makes name nonreusable
 };

@@ -13,8 +13,9 @@ double chanceToAdv;
 
 void start_race(struct HorseListee *listHead) {
     while(listHead) {
-	printf("%s is number %d\n",listHead->horse->name,
-		listHead->horse->raceNum);
+	printf("%s is number %d his odds of advancing are %%%d\n",
+		listHead->horse->name, listHead->horse->raceNum,
+		listHead->horse->odds);
 	listHead = listHead->next;
     };
 };
