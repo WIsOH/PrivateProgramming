@@ -11,38 +11,44 @@
 #include "Race.h"
 
 struct HorseListee {
-    struct Horse *horse;
-    struct HorseListee *next;
-    int placeOnTrack;
-}; //Linked list attempt, Jesus take the wheel. 
+	struct Horse *horse;
+	struct HorseListee *next;
+	int placeOnTrack;
+};				//Linked list attempt, Jesus take the wheel. 
 
 struct HorseListee *create_horse_listee(struct Horse *horse,
-	struct HorseListee *raceHorse) {
-    struct HorseListee *racey =(struct HorseListee*)malloc(sizeof
-	    (struct HorseListee));
+					struct HorseListee *raceHorse)
+{
+	struct HorseListee *racey = (struct HorseListee *)malloc(sizeof
+								 (struct
+								  HorseListee));
 
-    racey->horse = horse;
-    racey->next = raceHorse;
+	racey->horse = horse;
+	racey->next = raceHorse;
 
-    return racey;
+	return racey;
 };
 
-struct HorseListee *create_horse_linked_list(int numOfRacers) {
-    struct HorseListee *hLHead, *hLCurr;
-    hLHead = NULL;
-    int i;
-    
-    for(i=0;i<numOfRacers;i++) {
-	hLCurr = create_horse_listee(gen_horse(), hLHead);
-	hLHead = hLCurr;
-    };
+struct HorseListee *create_horse_linked_list(int numOfRacers)
+{
+	struct HorseListee *hLHead, *hLCurr;
+	hLHead = NULL;
+	int i;
 
-    return hLHead;
+	for (i = 0; i < numOfRacers; i++) {
+		hLCurr = create_horse_listee(gen_horse(), hLHead);
+		hLHead = hLCurr;
+	};
+
+	return hLHead;
 };
 
-int main() {
-    srand(time(NULL));
-    struct HorseListee *headOfHorseList = create_horse_linked_list(8);
+int main()
+{
+	srand(time(NULL));
+	struct HorseListee *headOfHorseList = create_horse_linked_list(8);
+	int i;
 
-    start_race(headOfHorseList);
+	start_race(headOfHorseList);
+	while (!race(headOfHorseList));
 };

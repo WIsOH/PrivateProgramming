@@ -9,6 +9,7 @@
 struct HorseListee {
     struct Horse *horse;
     struct HorseListee *next;
+    int placeOnTrack;
 };
 
 #endif
