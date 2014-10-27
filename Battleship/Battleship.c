@@ -4,33 +4,48 @@
  **/
 
 #include <stdio.h>
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_image.h>
-#include <allegro5/allegro_primitives.h>
-
-int main(int argc, char **argv){
-
-	ALLEGRO_DISPLAY *display = NULL;
-	ALLEGRO_DISPLAY_MODE disp_data;
+{
+	DISPLAY *display = NULL;
+	ALLEGRO_BITMAP *image = NULL;
 
 	if(!al_init()) {
-		fprintf(stderr, "failed to initialize allegro!\n");
-		return -1;
+		al_show_native_message_box(display, "Error", "Error",
+				"Failed to initialize allegro!", NULL,
+				ALLEGRO_MESSAGEBOX_ERROR);
+		return 0;
 	}
-	al_init_image_addon();
-	al_init_primitives_addon();
 
-	al_get_display_mode(al_get_num_display_modes() - 1, &disp_data);
+	if(!al_init_image_addon) {
+		al_show_native_message_box(display, "Error", "Error",
+				"Failed to initialize al_init_image_addon!",
+				NULL, ALLEGRO_MESSAGEBOX_ERROR);
+		return 0;
+	}
 
-	al_set_new_display_flags(ALLEGRO_FULLSCREEN);
-	display = al_create_display(disp_data.width, disp_data.height);
+	display = al_create_display(800,600);
 	if(!display) {
-		fprintf(stderr, "failed to create display!\n");
-		return -1;
+		al_show_native_message_box(display, "Error", "Error",
+				"Failed to initialize display!", NULL,
+				ALLEGRO_MESSAGEBOX_ERROR);
+		return 0;
 	}
 
-	al_rest(3);
+	image = al_load_bitmap("image.png");
+	if(!image) {
+		al_show_native_message_box(display, "Error", "Error",
+				"Failed to load image!", NULL,
+				ALLEGRO_MESSAGEBOX_ERROR);
+		al_destroy_display(display);
+		return 0;
+	}
+
+	al_draw_bitmap(image,200,200,0);
+
+	al_flip_display();
+	al_rest(2);
+
 	al_destroy_display(display);
+	al_destroy_bitmap(image);
 
 	return 0;
 }
