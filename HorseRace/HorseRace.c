@@ -10,18 +10,18 @@
 #include "Horse.h"
 #include "Race.h"
 
-struct HorseListee {
+struct horseList {
 	struct Horse *horse;
-	struct HorseListee *next;
+	struct horseList *next;
 	int placeOnTrack;
 };				//Linked list attempt, Jesus take the wheel. 
 
-struct HorseListee *create_horse_listee(struct Horse *horse,
-					struct HorseListee *raceHorse)
+struct horseList *create_horse_listee(struct Horse *horse,
+					struct horseList *raceHorse)
 {
-	struct HorseListee *racey = (struct HorseListee *)malloc(sizeof
+	struct horseList *racey = (struct horseList *)malloc(sizeof
 								 (struct
-								  HorseListee));
+								  horseList));
 
 	racey->horse = horse;
 	racey->next = raceHorse;
@@ -29,9 +29,9 @@ struct HorseListee *create_horse_listee(struct Horse *horse,
 	return racey;
 };
 
-struct HorseListee *create_horse_linked_list(int numOfRacers)
+struct horseList *create_horse_linked_list(int numOfRacers)
 {
-	struct HorseListee *hLHead, *hLCurr;
+	struct horseList *hLHead, *hLCurr;
 	hLHead = NULL;
 	int i;
 
@@ -46,9 +46,9 @@ struct HorseListee *create_horse_linked_list(int numOfRacers)
 int main()
 {
 	srand(time(NULL));
-	struct HorseListee *headOfHorseList = create_horse_linked_list(8);
-	int i;
+	struct horseList *headOfHorseList = create_horse_linked_list(8);
 
 	start_race(headOfHorseList);
 	while (!race(headOfHorseList));
+	return 0;
 };

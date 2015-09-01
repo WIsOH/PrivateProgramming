@@ -6,10 +6,10 @@
 #ifndef RACE_H_
 #define RACE_H_
 
-struct HorseListee;
+struct horseList;
 
-void start_race(struct HorseListee *listHead);
+void start_race(struct horseList *listHead);
 
-int race(struct HorseListee *listHead);
+int race(struct horseList *listHead);
 
 #endif

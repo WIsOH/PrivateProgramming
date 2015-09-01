@@ -10,28 +10,29 @@
 #include "HorseRace.h"
 #include "Horse.h"
 
-void start_race(struct HorseListee *listHead)
+int raceWon;
+
+void start_race(struct horseList *listHead)
 {
-	struct HorseListee *save = listHead;
+	raceWon = 0;
+	struct horseList *save = listHead;
 
 	while (listHead) {
-		printf("%s is number %d his odds of advancing are %%%d\n",
+		printf("%s is number %d his odds of advancing are %%%d"
+			" followed by %s\n",
 		       listHead->horse->name, listHead->horse->raceNum,
-		       listHead->horse->odds);
+		       listHead->horse->odds,listHead->next->horse->name);
 	listHead = listHead->next;
 	};
-	
 	listHead = save;
 };
 
-int race(struct HorseListee *listHead)
+int race(struct horseList *listHead)
 {
-	struct HorseListee *save = listHead;
-	char *pos;
 	int raceWon = 0;
-	int i;
+	struct horseList *save = listHead;
 
-	while (listHead) {
+	while (!raceWon) {
 		if (rand() % 100 * 50 >= 2500) {
 			listHead->placeOnTrack += 1;
 			printf("%s has advanced on place on the track\n",
@@ -44,18 +45,16 @@ int race(struct HorseListee *listHead)
 
 		printf("%s", pos);
 		printf("####################");
-
-		listHead = listHead->next;*/
+		*/
 
 		if (listHead->placeOnTrack >= 20) {
 			raceWon = 1;
-
 			printf("%s has won!\n", listHead->horse->name);
-			return raceWon;
-		} else {
-			return raceWon;
 		};
+
+		listHead = listHead->next;
 	};
 
-	listHead = save;
+	listHead=save;
+	return raceWon;
 };

@@ -6,9 +6,9 @@
 #ifndef HORSERACE_H_
 #define HORSERACE_H_
 
-struct HorseListee {
+struct horseList {
     struct Horse *horse;
-    struct HorseListee *next;
+    struct horseList *next;
     int placeOnTrack;
 };
 

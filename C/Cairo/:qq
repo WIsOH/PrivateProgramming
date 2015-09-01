@@ -1,0 +1,89 @@
+libcaca DOS conio.h compatibility layer(3caca)    libcaca    libcaca DOS conio.h compatibility layer(3caca)
+
+
+
+NNAAMMEE
+       libcaca DOS conio.h compatibility layer -
+
+   FFuunnccttiioonnss
+       __extern char * ccaaccaa__ccoonniioo__ccggeettss (char *str)
+           _D_O_S _c_o_n_i_o_._h _c_g_e_t_s_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__ccllrreeooll (void)
+           _D_O_S _c_o_n_i_o_._h _c_l_r_e_o_l_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__ccllrrssccrr (void)
+           _D_O_S _c_o_n_i_o_._h _c_l_r_s_c_r_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__ccpprriinnttff (const char *format,...)
+           _D_O_S _c_o_n_i_o_._h _c_p_r_i_n_t_f_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__ccppuuttss (const char *str)
+           _D_O_S _c_o_n_i_o_._h _c_p_u_t_s_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__ccssccaannff (char *format,...)
+           _D_O_S _s_t_d_i_o_._h _c_s_c_a_n_f_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__ddeellaayy (unsigned int)
+           _D_O_S _d_o_s_._h _d_e_l_a_y_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__ddeelllliinnee (void)
+           _D_O_S _c_o_n_i_o_._h _d_e_l_l_i_n_e_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__ggeettcchh (void)
+           _D_O_S _c_o_n_i_o_._h _g_e_t_c_h_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__ggeettcchhee (void)
+           _D_O_S _c_o_n_i_o_._h _g_e_t_c_h_e_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern char * ccaaccaa__ccoonniioo__ggeettppaassss (const char *prompt)
+           _D_O_S _c_o_n_i_o_._h _g_e_t_p_a_s_s_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__ggeetttteexxtt (int left, int top, int right, int bottom, void *destin)
+           _D_O_S _c_o_n_i_o_._h _g_e_t_t_e_x_t_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__ggeetttteexxttiinnffoo (struct ccaaccaa__ccoonniioo__tteexxtt__iinnffoo *r)
+           _D_O_S _c_o_n_i_o_._h _g_e_t_t_e_x_t_i_n_f_o_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__ggoottooxxyy (int x, int y)
+           _D_O_S _c_o_n_i_o_._h _g_o_t_o_x_y_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__hhiigghhvviiddeeoo (void)
+           _D_O_S _c_o_n_i_o_._h _h_i_g_h_v_i_d_e_o_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__iinnsslliinnee (void)
+           _D_O_S _c_o_n_i_o_._h _i_n_s_l_i_n_e_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__kkbbhhiitt (void)
+           _D_O_S _c_o_n_i_o_._h _k_b_h_i_t_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__lloowwvviiddeeoo (void)
+           _D_O_S _c_o_n_i_o_._h _l_o_w_v_i_d_e_o_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__mmoovveetteexxtt (int left, int top, int right, int bottom, int destleft, int
+           desttop)
+           _D_O_S _c_o_n_i_o_._h _m_o_v_e_t_e_x_t_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__nnoorrmmvviiddeeoo (void)
+           _D_O_S _c_o_n_i_o_._h _n_o_r_m_v_i_d_e_o_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__nnoossoouunndd (void)
+           _D_O_S _d_o_s_._h _n_o_s_o_u_n_d_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__pprriinnttff (const char *format,...)
+           _D_O_S _s_t_d_i_o_._h _p_r_i_n_t_f_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__ppuuttcchh (int ch)
+           _D_O_S _c_o_n_i_o_._h _p_u_t_c_h_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__ppuutttteexxtt (int left, int top, int right, int bottom, void *destin)
+           _D_O_S _c_o_n_i_o_._h _p_u_t_t_e_x_t_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo____sseettccuurrssoorrttyyppee (int cur_t)
+           _D_O_S _c_o_n_i_o_._h ___s_e_t_c_u_r_s_o_r_t_y_p_e_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__sslleeeepp (unsigned int)
+           _D_O_S _d_o_s_._h _s_l_e_e_p_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__ssoouunndd (unsigned int)
+           _D_O_S _d_o_s_._h _s_o_u_n_d_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__tteexxttaattttrr (int newattr)
+           _D_O_S _c_o_n_i_o_._h _t_e_x_t_a_t_t_r_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__tteexxttbbaacckkggrroouunndd (int newcolor)
+           _D_O_S _c_o_n_i_o_._h _t_e_x_t_b_a_c_k_g_r_o_u_n_d_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__tteexxttccoolloorr (int newcolor)
+           _D_O_S _c_o_n_i_o_._h _t_e_x_t_c_o_l_o_r_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__tteexxttmmooddee (int newmode)
+           _D_O_S _c_o_n_i_o_._h _t_e_x_t_m_o_d_e_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__uunnggeettcchh (int ch)
+           _D_O_S _c_o_n_i_o_._h _u_n_g_e_t_c_h_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__wwhheerreexx (void)
+           _D_O_S _c_o_n_i_o_._h _w_h_e_r_e_x_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern int ccaaccaa__ccoonniioo__wwhheerreeyy (void)
+           _D_O_S _c_o_n_i_o_._h _w_h_e_r_e_y_(_) _e_q_u_i_v_a_l_e_n_t_.
+       __extern void ccaaccaa__ccoonniioo__wwiinnddooww (int left, int top, int right, int bottom)
+           _D_O_S _c_o_n_i_o_._h _w_i_n_d_o_w_(_) _e_q_u_i_v_a_l_e_n_t_.
+
+DDeettaaiilleedd DDeessccrriippttiioonn
+       These functions implement DOS-like functions for high-level text operations.
+
+AAuutthhoorr
+       Generated automatically by Doxygen for libcaca from the source code.
+
+
+
+Version 0.99.beta19                           Tue Nov 25 2014libcaca DOS conio.h compatibility layer(3caca)
